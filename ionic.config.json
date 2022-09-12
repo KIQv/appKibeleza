@@ -1,0 +1,7 @@
+{
+  "name": "appti14",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
