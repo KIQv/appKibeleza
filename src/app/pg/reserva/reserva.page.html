@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar class="topo" color="primary">
+    <ion-title>{{ this.dados[0]?.nomeServico }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="corpo">
+
+  <ion-row>
+    <ion-slides pager="true"> <!--Começo ionic slide-->
+      <ion-slide> <!--Slide 01-->
+        <ion-img src="{{ this.servidorUrl.pegarUrl() + this.dados[0]?.fotoServico1 }}" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+      </ion-slide> <!--Fim slide 01-->
+  
+      <ion-slide> <!--Slide 02-->
+        <ion-img src="{{ this.servidorUrl.pegarUrl() + this.dados[0]?.fotoServico1 }}" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+      </ion-slide> <!--Fim slide 02-->
+  
+      <ion-slide> <!--Slide 03-->
+        <ion-img src="{{ this.servidorUrl.pegarUrl() + this.dados[0]?.fotoServico1 }}" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+      </ion-slide> <!--Fim slide 03-->
+
+      <ion-slide> <!--Slide 04-->
+        <ion-img src="{{ this.servidorUrl.pegarUrl() + this.dados[0]?.fotoServico1 }}" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+      </ion-slide> <!--Fim slide 04-->
+    </ion-slides> <!--Fim ionic slide-->
+</ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <h1>Agendar Serviço!</h1>
+    </ion-col>
+
+    <form [formGroup]="reserva" (ngSubmit)="cadReserva()"> <!--ngSubmit - Submeter todos os dados dentro do form, enviar todos esses dados-->
+      <ion-col size="12">
+        <ion-item>
+          <ion-label>Profissional</ion-label>
+          <ion-select [(ngModel)]="codFunc" okText="Confirmar" cancelText="Fechar" [(ngModel)]="codFunc" formControlName="codFunc" >
+            <ion-select-option *ngFor="let func of funcs" value="{{ func.idFuncionario }}">{{ func.nomeFuncionario }}</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+      <ion-col size="12">
+        <ion-datetime 
+        locale="pt-BR" min="{{ dataMin }}" minuteValues="0,30" doneText="Confirmar" cancelText="Fechar" [(ngModel)]="dataReserva" formControlName="dataReserva"><span slot="time-label">Selecione a hora:</span></ion-datetime>
+      </ion-col>
+      <ion-col size="12">
+        <ion-button expand="block" type="submit">AGENDAR</ion-button>
+      </ion-col>
+    </form> <!--fim form-->
+  </ion-row>
+
+  <ion-row class="iconSocial">
+    <ion-col size="2" offset="2">
+      <a href="#">
+        <ion-img src="../../../assets/facebook.svg" alt="Logo Facebook"></ion-img>
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/instagram.svg" alt="Logo Instagram"></ion-img>
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/twitter.svg" alt="Logo Twitter"></ion-img>
+      </a>
+    </ion-col>
+    <ion-col size="2">
+      <a href="#">
+        <ion-img src="../../../assets/WhatsVerde.svg" alt="Logo Whatsapp"></ion-img>
+      </a>
+    </ion-col> 
+  </ion-row>
+
+</ion-content>

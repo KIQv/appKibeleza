@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar class="topo" color="primary">
+    <ion-title>{{ this.dados[0]?.nomeServico }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="corpo">
+
+  <ion-row>
+      <ion-slides pager="true"> <!--Começo ionic slide-->
+        <ion-slide> <!--Slide 01-->
+          <ion-img src="{{ this.servidorUrl.pegarUrl() + this.dados[0]?.fotoServico1 }}" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+        </ion-slide> <!--Fim slide 01-->
+    
+        <ion-slide> <!--Slide 02-->
+          <ion-img src="#" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+        </ion-slide> <!--Fim slide 02-->
+    
+        <ion-slide> <!--Slide 03-->
+          <ion-img src="#" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+        </ion-slide> <!--Fim slide 03-->
+
+        <ion-slide> <!--Slide 04-->
+          <ion-img src="#" alt="{{ this.dados[0]?.nomeServico }}"></ion-img>
+        </ion-slide> <!--Fim slide 04-->
+      </ion-slides> <!--Fim ionic slide-->
+  </ion-row>
+
+  <ion-row>
+    <ion-col class="texto" size="12">
+      <p>
+        {{ this.dados[0]?.descricaoServico }}      
+      </p>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <a href="/tabs/pg/reserva/{{ dados[0]?.idServico }}"><ion-button expand="block">Solicitar</ion-button></a>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

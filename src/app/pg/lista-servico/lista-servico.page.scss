@@ -1,0 +1,62 @@
+.topo {
+    padding-top: 10%;
+    text-align: center;
+}
+
+.topo ion-title{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: bold;    
+    color: white; 
+
+}
+.corpo{
+    /*sem repetir - centralizar horizontalmente - centralizar verticalmente - cobrir  */
+    --background: #fff url(../../../assets/FundoArt.png) no-repeat center center / cover;
+}
+
+.servicoItem{
+    text-align: justify;
+    background: rgba(217, 158, 145, 0.5);
+}
+
+.servicoItem:nth-child(even){
+    background: rgba(217, 158, 145, 1);
+}
+
+
+.servicoItem ion-tab-button{
+    justify-content: flex-start;
+    --padding-end: 0;
+    --padding-start: 5px;
+}
+
+.servicoItem ion-img{
+    width: 120px;
+    height: 120px;
+}
+
+.servicoItem span.button-inner{
+    display: initial !important;
+}
+
+.servicoItem h4{
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
+}
+
+.servicoItem p{
+    margin-top: 1%;
+    font-size: .7em;
+    padding-right: 3%;
+    color: black;
+}
+
+.servicoItem ion-icon{
+    float: right;
+    font-size: 2em;
+    color: white;
+}

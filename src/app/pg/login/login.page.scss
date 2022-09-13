@@ -1,0 +1,39 @@
+.corpo{
+    /*sem repetir - centralizar horizontalmente - centralizar verticalmente - cobrir  */
+    --background: #fff url(../../../assets/FundoArt.png) no-repeat center center / cover;
+    text-align: center;
+}
+.logo{
+    width: 70%;
+    margin: 20% auto 5% auto;
+    color: #8b63a6;
+}
+
+.corpo h1{
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #8b63a6;
+}
+
+.inputLogin{
+    margin-top: 25%;
+}
+
+ion-item{
+    /*--background: rgba(217, 158, 145, 0.5);*/
+    --border-color: #8b63a6;
+    --border-style: solid;
+    --border-width: 2px;
+    color: #8C375F;
+    font-weight: bold;
+}
+
+ion-button{
+    color: #8b63a6;
+    font-size: .8em;
+    font-weight: bold;
+    padding: 1% 0;
+    --border-color: #8b63a6;
+    --border-style: solid;
+    --border-width: 2px;
+}

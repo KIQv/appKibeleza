@@ -1,0 +1,43 @@
+<ion-content class="corpo">
+
+  <ion-img class="logo" src="../../../assets/Usuario.svg  " alt="Logo KiBeleza"></ion-img>
+
+  <ion-row>
+    <ion-col size="12">
+      <h1>Seja Bem-Vindo!</h1>
+    </ion-col>
+
+    <form [formGroup]="cadastro" (ngSubmit)="cadCliente()">
+      <ion-col size="8" offset="2" class="inputLogin">
+        <ion-item>
+          <ion-icon name="person" color="primary" slot="start"></ion-icon>
+          <ion-input type="text" placeholder="Nome:" autofocus="true" inputmode="nome" formControlName="nome" [(ngModel)]='nome'></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col size="8" offset="2">
+          <ion-item>
+            <ion-icon name="mail" color="primary" slot="start"></ion-icon>
+            <ion-input type="email" placeholder="Email:" inputmode="email" formControlName="email" [(ngModel)]='email'></ion-input> 
+          </ion-item>
+        </ion-col>
+      <ion-col size="8" offset="2">
+        <ion-item>
+          <ion-icon name="lock-closed" color="primary" slot="start"></ion-icon>
+          <ion-input type="password" placeholder="Senha:" inputmode="senha" formControlName="senha" [(ngModel)]='senha'></ion-input> 
+        </ion-item>
+      </ion-col>
+      <!-- <ion-col size="8" offset="2">
+        <ion-item>
+          <ion-icon name="call" color="primary" slot="start"></ion-icon>
+          <ion-input type="tel" placeholder="Telefone:" inputmode="fone" formControlName="nome" [(ngModel)]='fone'></ion-input>
+        </ion-item>
+      </ion-col> -->
+      <ion-col size="8" offset="2">
+        <ion-button expand="block" type="submit">CADASTRO</ion-button>
+      </ion-col>
+    </form>
+
+  </ion-row>
+
+</ion-content>
+
